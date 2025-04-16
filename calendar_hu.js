@@ -3,18 +3,25 @@
 
 document.querySelector('.widgets-step-1-container h4').textContent = "Válassz időpontot";
 
-// Összes .widgets-time-slot elem kiválasztása
-document.querySelectorAll('.widgets-time-slot').forEach(slot => {
-  slot.addEventListener('click', () => {
-    // Minden .btn .selected-slot > div elem szövegének átírása
-    document.querySelectorAll('.btn .selected-slot > div').forEach(elem => {
+document.addEventListener('click', (event) => {
+  const clickedSlot = event.target.closest('.widgets-time-slot');
+  if (clickedSlot) {
+    document.querySelectorAll('.btn.selected-slot > div').forEach(elem => {
       elem.textContent = "Kiválaszt";
     });
-  });
+  }
+
+  const slotBtn = event.target.closest('.btn.selected-slot');
+  if (slotBtn) {
+    setTimeout(() => {
+      const infoElem = document.querySelector('h4.text-info');
+      if (infoElem) {
+        infoElem.textContent = "Kérlek add meg az adataidat";
+      }
+    }, 100);
+  }
 });
 
-
-document.querySelector('h4.text-info').textContent = "Kérlek add meg az adataidat";
 document.querySelector('#form-first_name label').textContent = "Keresztnév";
 document.querySelector('#form-last_name label').textContent = "Vezetéknév";
 document.querySelector('#form-phone label').textContent = "Telefonszám";
