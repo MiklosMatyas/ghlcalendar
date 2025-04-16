@@ -20,6 +20,14 @@ document.addEventListener('click', (event) => {
       }
     }, 100);
   }
+  
+  const conf = event.target.closest('.confirmation-message');
+  if (conf) {
+    setTimeout(() => {
+        conf.textContent = "Az időpontfoglalásod elküldve";
+    }, 100);
+  }
+  
 });
 
 document.querySelector('#form-first_name label').textContent = "Keresztnév";
