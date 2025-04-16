@@ -18,6 +18,22 @@ document.addEventListener('click', (event) => {
       if (infoElem) {
         infoElem.textContent = "Kérlek add meg az adataidat";
       }
+      
+      const firstNameLabel = document.querySelector('#form-first_name label');
+      if (firstNameLabel) firstNameLabel.textContent = "Keresztnév";
+
+      const lastNameLabel = document.querySelector('#form-last_name label');
+      if (lastNameLabel) lastNameLabel.textContent = "Vezetéknév";
+
+      const phoneLabel = document.querySelector('#form-phone label');
+      if (phoneLabel) phoneLabel.textContent = "Telefonszám";
+
+      const notesLabel = document.querySelector('.calendar_notes label');
+      if (notesLabel) notesLabel.textContent = "További információk";
+
+      const notesTextarea = document.querySelector('.calendar_notes textarea');
+      if (notesTextarea) notesTextarea.placeholder = "Megjegyzés a kezeléssel kapcsolatban";
+      
     }, 100);
   }
   
@@ -30,10 +46,5 @@ document.addEventListener('click', (event) => {
   
 });
 
-document.querySelector('#form-first_name label').textContent = "Keresztnév";
-document.querySelector('#form-last_name label').textContent = "Vezetéknév";
-document.querySelector('#form-phone label').textContent = "Telefonszám";
-document.querySelector('.calendar_notes label').textContent = "További információk";
-document.querySelector('.calendar_notes textarea').placeholder = "Megjegyzés a kezeléssel kapcsolatban";
 
 
