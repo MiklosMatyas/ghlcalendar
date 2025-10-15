@@ -34,11 +34,11 @@ document.addEventListener('click', (event) => {
       const notesTextarea = document.querySelector('.calendar_notes textarea');
       if (notesTextarea) notesTextarea.placeholder = "Megjegyzés a kezeléssel kapcsolatban";
 
-      const notesTextarea = document.querySelector('.terms-text-container');
-      if (notesTextarea) notesTextarea.placeholder = "Megerősítem, hogy az általam megadott elérhetőségeken szeretnék tartalmat kapni ettől a vállalkozástól.";
+      const termsText = document.querySelector('.terms-text-container');
+      if (termsText) termsText.placeholder = "Megerősítem, hogy az általam megadott elérhetőségeken szeretnék tartalmat kapni ettől a vállalkozástól.";
       
-      const notesTextarea = document.querySelector('.terms-and-conditions .error');
-      if (notesTextarea) notesTextarea.placeholder = "Kérjük, fogadd el a feltételeket.";
+      const termsError = document.querySelector('.terms-and-conditions .error');
+      if (termsError) termsError.placeholder = "Kérjük, fogadd el a feltételeket.";
             
     }, 100);
   }
